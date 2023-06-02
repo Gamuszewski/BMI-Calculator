@@ -1,0 +1,107 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+class Calcbmi
+{
+    public:
+    string name;
+    string surname;
+    float height;
+    float weight;
+
+
+    float bmicalc()
+    {
+        float bmi;
+     bmi = weight / (height * height / 100) * 100;
+     cout << "Your BMI index is: " << bmi << endl;
+        if(bmi >= 18.5 && bmi <= 24.99)
+        {
+            cout << "You have optimal BMI index." << endl;
+        }
+    
+        if(bmi < 18.5)
+        {
+            cout << "You have underweight BMI index." << endl;
+        }
+        if(bmi > 24.99)
+        {
+            cout << "You have overweight BMI index." << endl;
+        }
+    return bmi;
+    }
+
+};
+
+
+int main()
+{
+int ChooseList = 1,x ;
+while(ChooseList != 0)
+{
+
+cout << " " << endl;
+cout << " " << endl;
+cout << "Welcome to BMI Index calculator" << endl;
+cout << "Choose what would you like to do: " << endl;
+cout << "1. New " << endl;
+cout << "2. History " << endl;
+cout << "0. Quit " << endl;
+cin >> ChooseList;
+cin.ignore();
+if(ChooseList == 1)
+    {
+        //Nowy obiekt
+
+        Calcbmi NewPerson;
+        cout << "New Record " << endl;
+        cout << "Enter your name" << endl;
+        getline(cin,NewPerson.name);
+        cout << "Enter your surname" << endl;
+        getline(cin,NewPerson.surname);
+        cout << "Enter your height" << endl;
+        cin >> NewPerson.height;
+        cout << "Enter your weight" << endl;
+        cin >> NewPerson.weight;
+        x = NewPerson.bmicalc();
+
+        ofstream plik("BMI.txt", ios::app);
+
+        if (plik.is_open()) {
+        // Zapis danych do pliku
+        plik << "Imie: ";
+        plik << NewPerson.name << endl;
+        plik << "Nazwisko: ";
+        plik << NewPerson.surname << endl;
+        plik << "Wzrost: ";
+        plik << NewPerson.height << endl;
+        plik << "Waga: ";
+        plik << NewPerson.weight << endl;
+        plik << "BMI Index: ";
+        plik << x << endl;
+
+        // Zamknięcie pliku
+        plik.close();
+        }
+        else {
+        cout << "Error" << endl;
+        }
+      }
+else if (ChooseList == 2)
+      {
+        string line;
+        ifstream plik("BMI.txt", ios::app);
+
+        if (plik.is_open()) {
+        while (getline(plik, line)) {
+        cout << line << std::endl;
+        }
+        plik.close();
+    } else  {
+        std::cout << "Error." << std::endl;
+            }
+      }
+    }
+}
