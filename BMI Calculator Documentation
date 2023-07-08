@@ -13,7 +13,7 @@ Code Documentation
 	It returns the calculated BMI index.
 
 3. main() Function
-The main function of the program handles user interaction. 
-It allows for entering personal data, calculating the BMI index, and saving the results to a text file. 
-It also offers the option to display the history of BMI calculations from the file. 
-In case of an invalid choice or incorrect data entry, appropriate error messages are displayed.
+	The main function of the program handles user interaction. 
+	It allows for entering personal data, calculating the BMI index, and saving the results to a text file. 
+	It also offers the option to display the history of BMI calculations from the file. 
+	In case of an invalid choice or incorrect data entry, appropriate error messages are displayed.
