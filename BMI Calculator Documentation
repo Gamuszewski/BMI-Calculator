@@ -1,0 +1,19 @@
+Code Documentation
+
+1. Classes
+1.1 Class Fields of Calcbmi
+	name (type: string): stores the person's first name.
+	surname (type: string): stores the person's last name.
+	height (type: float): stores the person's height in centimeters.
+	weight (type: float): stores the person's weight in kilograms.
+
+2. Methods
+2.1 Method bmicalc()
+	This function calculates the BMI (Body Mass Index) for a given person based on their height and weight. 
+	It returns the calculated BMI index.
+
+3. main() Function
+The main function of the program handles user interaction. 
+It allows for entering personal data, calculating the BMI index, and saving the results to a text file. 
+It also offers the option to display the history of BMI calculations from the file. 
+In case of an invalid choice or incorrect data entry, appropriate error messages are displayed.
