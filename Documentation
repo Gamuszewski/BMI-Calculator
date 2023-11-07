@@ -1,7 +1,7 @@
 Code Documentation
 
 1. Classes
-1.1 Class Fields of Calcbmi
+1.1 Class Fields of BMI_calculator
 	name (type: string): stores the person's first name.
 	surname (type: string): stores the person's last name.
 	height (type: float): stores the person's height in centimeters.
