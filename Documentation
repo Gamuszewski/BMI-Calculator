@@ -8,7 +8,7 @@ Code Documentation
 	weight (type: float): stores the person's weight in kilograms.
 
 2. Methods
-2.1 Method bmicalc()
+2.1 Method BMI_calculator()
 	This function calculates the BMI (Body Mass Index) for a given person based on their height and weight. 
 	It returns the calculated BMI index.
 
