@@ -108,5 +108,5 @@ int main(){
      cout << "\nProvide valid option." << endl << "" << endl;
     }
   }
-cout << "\nBe more confident with your body, see you later!\n";
+cout << "\nSee you later!\n";
 }
