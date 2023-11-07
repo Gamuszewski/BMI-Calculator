@@ -3,7 +3,7 @@
 #include <fstream>
 using namespace std;
 
-class Calcbmi{
+class BMI_calculator{
   public:
   string name;
   string surname;
@@ -49,7 +49,7 @@ int main(){
 
    if(ChooseList == 1){
      //New Object
-     Calcbmi NewPerson;
+     BMI_calculator NewPerson;
      cout << "New Record " << endl;
      cout << "Enter your name" << endl;
      getline(cin,NewPerson.name);
@@ -73,20 +73,20 @@ int main(){
 
      //Saving data
 
-     ofstream plik("BMI.txt", ios::app);
+     ofstream file("BMI.txt", ios::app);
 
-     if (plik.is_open()){
-       plik << "Name: ";
-       plik << NewPerson.name << endl;
-       plik << "Surname: ";
-       plik << NewPerson.surname << endl;
-       plik << "Height: ";
-       plik << NewPerson.height << endl;
-       plik << "Weight: ";
-       plik << NewPerson.weight << endl;
-       plik << "BMI Index: ";
-       plik << calcvessel << endl;
-       plik.close();
+     if (file.is_open()){
+       file << "Name: ";
+       file << NewPerson.name << endl;
+       file << "Surname: ";
+       file << NewPerson.surname << endl;
+       file << "Height: ";
+       file << NewPerson.height << endl;
+       file << "Weight: ";
+       file << NewPerson.weight << endl;
+       file << "BMI Index: ";
+       file << calcvessel << endl;
+       file.close();
       }
      else{
        cout << "Error" << endl;
@@ -94,13 +94,13 @@ int main(){
     }
    else if (ChooseList == 2){
      string line;
-     ifstream plik("BMI.txt", ios::app);
+     ifstream file("BMI.txt", ios::app);
 
-     if (plik.is_open()){
-       while (getline(plik, line)){
+     if (file.is_open()){
+       while (getline(file, line)){
          cout << line << endl;
         }
-         plik.close();
+         file.close();
       }else{
          cout << "Error." << endl;
         }
