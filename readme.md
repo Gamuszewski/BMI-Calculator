@@ -1,61 +1,67 @@
-BMI Index Calculator - User Guide
 
-Table of Contents
-1. Introduction
-2. Installation
-3. Usage
-4. History
-5. Quitting the Program
+# BMI Calculator - User Guide
 
-1. Introduction:
-The BMI Index Calculator is a simple command-line program that allows you to calculate and keep track of your Body Mass Index (BMI) and related information.
-This readme provides instructions on how to use the program effectively.
+## Table of Contents
 
-3. Installation:
-No installation is required for this program. You need a C++ compiler to compile and run the program. You can use tools like g++ to compile the source code and create an executable.
+1. [Introduction](#introduction)
+2. [Usage](#usage)
+3. [History](#history)
+4. [Quitting the Program](#quitting-the-program)
 
-4. Usage:
-To use the BMI Index Calculator, follow these steps:
+## Introduction
 
-- Run the compiled executable in your terminal or command prompt.
+The BMI Calculator is a command-line program written in C++ that allows you to calculate and keep track of your Body Mass Index (BMI) and related information. This README provides instructions on how to effectively use the program.
 
-- Upon launching the program, you will be greeted with a welcome message and a menu:
-    ```
-    Welcome to BMI Index calculator
-    Choose what would you like to do:
-    1. New
-    2. History
-    0. Quit
-    ```
-- To proceed, enter the number corresponding to the action you want to take.
+## Usage
 
-- If you choose '1. New', you will be prompted to enter your personal information:
-    - Your name
-    - Your surname
-    - Your height (in centimeters)
-    - Your weight (in kilograms)
+To use the BMI Calculator, follow these steps:
 
-  Note: The program will handle invalid inputs for height and weight (non-numeric values) and prompt you for valid inputs.
+1. Compile the source code using a C++ compiler, such as g++.
 
-- After entering your information, the program will calculate your BMI index and provide feedback on whether your BMI is optimal, underweight, or overweight.
+   ```shell
+   g++ bmi_calculator.cpp -o bmi_calculator
+   ```
 
-- Your information, along with the calculated BMI index, will be saved to a file named "BMI.txt".
+2. Run the compiled executable in your terminal or command prompt.
 
-4. History:
-If you choose '2. History' from the menu, the program will display the historical records stored in the "BMI.txt" file. Each record includes the following details:
-- Name
-- Surname
-- Height
-- Weight
-- BMI Index
+   ```shell
+   ./bmi_calculator
+   ```
 
-5. Quitting the Program:
-To exit the program, choose '0. Quit' from the menu. You will see the message: "Be more confident with your body, see you later!"
+3. Upon launching the program, you will be greeted with a welcome message and a menu:
 
-Note: Make sure the "BMI.txt" file is in the same directory as the executable for the program to work properly.
+   ```
+   Welcome to BMI Index calculator
+   Choose what you would like to do:
+   1. New
+   2. History
+   0. Quit
+   ```
 
-Remember that BMI is a simple measurement and may not provide a complete assessment of your health. Consult a medical professional for a more comprehensive evaluation.
+4. To proceed, enter the number corresponding to the action you want to take.
 
-For further assistance, contact: [Your Contact Information]
+   - If you choose '1. New', you will be prompted to enter your personal information:
+     - Your name
+     - Your surname
+     - Your height (in centimeters)
+     - Your weight (in kilograms)
 
-Enjoy using the BMI Index Calculator!
+     Note: The program handles invalid inputs for height and weight (non-numeric values) and prompts you for valid inputs.
+
+   - After entering your information, the program will calculate your BMI index and provide feedback on whether your BMI is optimal, underweight, or overweight.
+
+   - Your information, along with the calculated BMI index, will be saved to a file named "BMI.txt."
+
+5. **History:** If you choose '2. History' from the menu, the program will display the historical records stored in the "BMI.txt" file. Each record includes the following details:
+
+   - Name
+   - Surname
+   - Height
+   - Weight
+   - BMI Index
+
+6. **Quitting the Program:** To exit the program, choose '0. Quit' from the menu. You will see the message: "See you later!"
+
+   Note: Make sure the "BMI.txt" file is in the same directory as the executable for the program to work properly.
+
+   Remember that BMI is a simple measurement and may not provide a complete assessment of your health. Consult a medical professional for a more comprehensive evaluation.
